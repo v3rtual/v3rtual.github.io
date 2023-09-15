@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html class=" qutwasb idc0_347" lang="en">
+<html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>v3rtual</title>
+    <title>♇luto</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light only">
-    <meta name="description" content="v3rtual's negative trigger list.">
-    <meta property="og:site_name" content="v3rtual ntl">
-    <meta property="og:title" content="v3rtual ntl">
+    <meta name="description" content="Pluto Showalt's Character Sheet.">
+    <meta property="og:site_name" content="♇luto">
+    <meta property="og:title" content="♇luto">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="v3rtual's negative trigger list.">
+    <meta property="og:description" content="Pluto Showalt's Character Sheet.">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="800">
+    <meta property="og:url" content="https://v3rtual.carrd.co">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://v3rtual.carrd.co/">
+    <link href="pluto_files/css2.css" rel="stylesheet" type="text/css">
     <style>
       html,
       body,
@@ -195,7 +199,7 @@
         transform: scale(1);
         width: 100vw;
         z-index: 0;
-        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20preserveAspectRatio%3D%22none%22%3E%20%3Cstyle%3E%20path%20%7B%20stroke-linecap%3A%20square%3B%20stroke-width%3A%202.01px%3B%20stroke%3A%20rgba(219,175,169,0.188)%3B%20vector-effect%3A%20non-scaling-stroke%3B%20%7D%20%3C%2Fstyle%3E%20%3Cpath%20d%3D%22M%20256%20192%20L%20256%20320%20M%20192%20256%20L%20320%20256%22%20%2F%3E%3C%2Fsvg%3E'), linear-gradient(45deg, rgba(179, 0, 13, 0.69) 0%, rgba(147, 0, 20, 0.753) 60%), url('file:///C|/Users/Lucien/Desktop/assets/images/bg.jpg?v=1ceb46f6');
+        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20preserveAspectRatio%3D%22none%22%3E%20%3Cstyle%3E%20path%20%7B%20stroke-linecap%3A%20square%3B%20stroke-width%3A%202.01px%3B%20stroke%3A%20rgba(219,175,169,0.188)%3B%20vector-effect%3A%20non-scaling-stroke%3B%20%7D%20%3C%2Fstyle%3E%20%3Cpath%20d%3D%22M%20256%20192%20L%20256%20320%20M%20192%20256%20L%20320%20256%22%20%2F%3E%3C%2Fsvg%3E'), linear-gradient(45deg, rgba(128, 69, 118, 0.69) 29%, rgba(204, 147, 198, 0.753) 43%), url('assets/images/bg.jpg?v=389f7ea9');
         background-size: 62px, cover, cover;
         background-position: center, 0% 0%, center;
         background-repeat: repeat, repeat, repeat;
@@ -252,18 +256,15 @@
       }
 
       code {
-    background-color: rgba(144, 0, 0, 0.25);
-    border-radius: 0.25em;
-    font-family: 'Lucida Console', 'Courier New', monospace;
-    font-size: 0.47em;
-    font-weight: normal;
-    letter-spacing: 0;
-    margin-top: 0;
-    margin-right: 0em;
-    margin-left: 0em;
-    margin-bottom: 0;
-    padding: 0.25em 0.5em;
-    text-indent: 0;
+        background-color: rgba(144, 144, 144, 0.25);
+        border-radius: 0.25em;
+        font-family: 'Lucida Console', 'Courier New', monospace;
+        font-size: 0.9em;
+        font-weight: normal;
+        letter-spacing: 0;
+        margin: 0 0.25em;
+        padding: 0.25em 0.5em;
+        text-indent: 0;
       }
 
       mark {
@@ -451,12 +452,13 @@
       }
 
       #text01 {
+        text-align: center;
         color: #FFFFFF;
         font-family: 'Work Sans', sans-serif;
         letter-spacing: -0.175rem;
         width: 100%;
-        font-size: 3.75em;
-        line-height: 1;
+        font-size: 3em;
+        line-height: 1.125;
         font-weight: 500;
       }
 
@@ -497,6 +499,58 @@
 
       #text02 span.p:nth-child(n + 2) {
         margin-top: 1rem;
+      }
+
+      .image {
+        display: block;
+        line-height: 0;
+        max-width: 100%;
+        position: relative;
+      }
+
+      .image .frame {
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        vertical-align: top;
+        width: 100%;
+      }
+
+      .image .frame img {
+        border-radius: 0 !important;
+        max-width: 100%;
+        vertical-align: top;
+        width: inherit;
+      }
+
+      .image.full .frame {
+        display: block;
+      }
+
+      .image.full:first-child .frame {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+
+      .image.full:last-child .frame {
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+
+      #image01 {
+        text-align: center;
+      }
+
+      #image01 .frame {
+        width: 15rem;
+        border-radius: 1.875rem;
+        transition: none;
+      }
+
+      #image01 .frame img {
+        transition: none;
       }
 
       .container {
@@ -543,7 +597,7 @@
         width: 100%;
         align-items: flex-end;
         justify-content: flex-start;
-        background-color: rgba(160, 0, 0, 0.678);
+        background-color: rgba(51, 23, 74, 0.678);
         -webkit-backdrop-filter: blur(0.525rem);
         backdrop-filter: blur(0.525rem);
         box-shadow: 0rem 0.625rem 3.5rem 0.75rem rgba(74, 26, 19, 0.259);
@@ -824,6 +878,10 @@
           line-height: 1.125;
         }
 
+        #image01 .frame {
+          width: 15rem;
+        }
+
         #container01 {
           min-height: 28rem;
         }
@@ -984,7 +1042,6 @@
       </style>
     </noscript>
     <style></style>
-    <style></style>
   </head>
   <body class="is-ready">
     <div id="wrapper">
@@ -994,15 +1051,51 @@
             <div class="wrapper">
               <div class="inner">
                 <h1 id="text01" style="opacity: 1; transform: none;">
-                  <code>negative trigger list</code>
+                  <code>♇luto Showalt</code>
                 </h1>
+                <div id="image01" class="image">
+                  <br>
+                  <span class="frame">
+                    <img src="pluto_files/image01.jpg" alt="">
+                  </span>
+                </div>
                 <p id="text02" style="opacity: 1; transform: none;">
-                  <span class="p">please don't do/mention these!</span>
-                  <span class="p">1. nsfw</span>
-                  <span class="p">2. ableism in any form</span>
-                  <span class="p">3. certain compliments towards my physical appearance (compliments such as 'cute,' 'handsome' are NOT OK!)</span>
-                  <span class="p">4. usage of certain typing styles where proper punctuation and capitilization is used but not proper grammar, especially if you are over the age of 18</span>
-                  <span class="p">5. being told i 'talk too much,' to 'be quiet' or to 'shut up'</span>
+                  <span class="p">
+                    <strong>Name</strong>
+                    <br> Pluto Showalt </span>
+                  <span class="p">
+                    <strong>Object</strong>
+                    <br> A plutonium disc, used in nuclear reactors, with visible dents and drips. </span>
+                  <span class="p">
+                    <strong>Age</strong>
+                    <br> Pluto is at least 11,000 years old, as they had put themself in stasis for that long. </span>
+                  <span class="p">
+                    <strong>Gender</strong>
+                    <br> Pluto doesn't really have a gender, but uses they/them pronouns. </span>
+                  <span class="p">
+                    <strong>Personality</strong>
+                    <br> Pluto was once brimming with an outgoing nature, they radiated a vibrant energy and possessed an innate ability to express themselves freely. Their spirit knew no bounds, and their trust was extended generously, embracing the world with open arms. However, the tides of fate took a somber turn as they were forced to witness the harrowing demise of countless friends, their lives extinguished before Pluto's very eyes. The relentless horrors of war etched deep wounds within their being, molding them into an embodiment of caution and vigilance. Pluto's response to the trauma they endured manifests as a deliberate repression of emotions, a self-protective mechanism forged through the crucible of revolution. Trust no longer comes easily to Pluto, as the scars of their past have made them acutely aware of the inherent fragility and duplicity that often lurks within humanity. In their journey through life, they navigate the realms of caution and skepticism, their eyes perpetually scanning for signs of treachery or deceit. Despite all of this, if you really gain their trust and get to know them, they are a very kind soul, very silly and fun to be around. <span class="p">
+                      <strong>Past Camps</strong>
+                      <br>
+                      Trapped in the Undergrowth </span>
+                    <span class="p">
+                      <strong>Fun facts</strong>
+                      <br> They're very careful with non-sentient objects under the circumstance they gain sentience or are already sentient. </span>
+                    <span class="p">
+                      <strong>Likes</strong>
+                      <br> Stickers, Space, Computer Science </span>
+                    <span class="p">
+                      <strong>Dislikes</strong>
+                      <br> Nuclear Power Plants, The Heat, and (mostly) other people </span>
+                    <span class="p">
+                      <strong>Lore</strong>
+                      <br> Pluto has fought through and lived through an entire revolutionary war for the rights of objects. Long, Long ago was the first time some objects became sentient; and humans were terribly afraid. They fought the objects to try and remain the only sapient species on their planet to be able to continue using objects. But, It didn't work, as more and more objects began to become sentient. Pluto was one of the very first to become sentient; becoming conscious within the heart of a nuclear reactor. They were a plutonium disc about to be used for a fission reaction. They managed to get out before they were destroyed, but the nuclear reactor they came out of subsequently exploded due to the failure. This swayed public opinion to think that it was an act of terrorism, and the public began attempting to destroy any sentient object they came across. Pluto continued ot fight through this; making friends in battle along the way. However; Their friends were brutally killed right in front of them, scarring them deeply. They ran away, and created a safe space for themself to not be found by humans, and then put themself into cryogenic stasis for 11,000 years. Now, They have come back from and observe the victory of their kind, however mistrustful they may be. </span>
+                    <span class="p">
+                      <strong>Abilities</strong>
+                      <br> Tremendously good with computers, front-end, back-end, server-side, client-side, they're good at it all. </span>
+                    <span class="p">
+                    <strong>Voice Claim</strong>
+                    <br> <a href="https://www.youtube.com/watch?v=lIAI8NExCw0">This Half-Life 1 Scientist, but a Little Bit Higher-Pitched.</a> </span>
                 </p>
               </div>
             </div>
@@ -1655,14 +1748,17 @@
               },
             },
           },
+          regex: new RegExp('([a-zA-Z0-9\.\,\-\_\"\'\?\!\:\;\#\@\#$\%\&\(\)\{\}]+)', 'g'),
           add: function(selector, settings) {
-            var style = settings.style in this.effects ? settings.style : 'fade',
+            var _this = this,
+              style = settings.style in this.effects ? settings.style : 'fade',
               speed = parseInt('speed' in settings ? settings.speed : 1000) / 1000,
               intensity = ((parseInt('intensity' in settings ? settings.intensity : 5) / 10) * 1.75) + 0.25,
               delay = parseInt('delay' in settings ? settings.delay : 0) / 1000,
               replay = 'replay' in settings ? settings.replay : false,
-              stagger = 'stagger' in settings ? (parseInt(settings.stagger) > -125 ? (parseInt(settings.stagger) / 1000) : false) : false,
+              stagger = 'stagger' in settings ? (parseInt(settings.stagger) >= 0 ? (parseInt(settings.stagger) / 1000) : false) : false,
               staggerOrder = 'staggerOrder' in settings ? settings.staggerOrder : 'default',
+              staggerSelector = 'staggerSelector' in settings ? settings.staggerSelector : null,
               state = 'state' in settings ? settings.state : null,
               effect = this.effects[style];
             if ('CARRD_DISABLE_ANIMATION' in window) {
@@ -1672,38 +1768,39 @@
               return;
             }
             $$(selector).forEach(function(e) {
-              var children = (stagger !== false) ? e.querySelectorAll(':scope > li, :scope ul > li') : null,
-                enter = function(staggerDelay = 0) {
-                  var _this = this,
-                    transitionOrig;
-                  if (effect.target) _this = this.querySelector(effect.target);
-                  if (!effect.custom) {
-                    transitionOrig = _this.style.transition;
-                    _this.style.setProperty('backface-visibility', 'hidden');
-                    _this.style.transition = effect.transition(speed, delay + staggerDelay);
-                  } else effect.transition.apply(_this, [speed, delay + staggerDelay]);
-                  effect.play.apply(_this, [intensity, !!children]);
-                  if (!effect.custom) setTimeout(function() {
-                    _this.style.removeProperty('backface-visibility');
-                    _this.style.transition = transitionOrig;
-                  }, (speed + delay + staggerDelay) * 1000 * 2);
-                },
-                leave = function() {
-                  var _this = this,
-                    transitionOrig;
-                  if (effect.target) _this = this.querySelector(effect.target);
-                  if (!effect.custom) {
-                    transitionOrig = _this.style.transition;
-                    _this.style.setProperty('backface-visibility', 'hidden');
-                    _this.style.transition = effect.transition(speed);
-                  } else effect.transition.apply(_this, [speed]);
-                  effect.rewind.apply(_this, [intensity, !!children]);
-                  if (!effect.custom) setTimeout(function() {
-                    _this.style.removeProperty('backface-visibility');
-                    _this.style.transition = transitionOrig;
-                  }, speed * 1000 * 2);
-                },
-                targetElement, triggerElement;
+              var children, enter, leave, targetElement, triggerElement;
+              if (stagger !== false && staggerSelector == ':scope > *') _this.expandTextNodes(e);
+              children = (stagger !== false && staggerSelector) ? e.querySelectorAll(staggerSelector) : null;
+              enter = function(staggerDelay = 0) {
+                var _this = this,
+                  transitionOrig;
+                if (effect.target) _this = this.querySelector(effect.target);
+                if (!effect.custom) {
+                  transitionOrig = _this.style.transition;
+                  _this.style.setProperty('backface-visibility', 'hidden');
+                  _this.style.transition = effect.transition(speed, delay + staggerDelay);
+                } else effect.transition.apply(_this, [speed, delay + staggerDelay]);
+                effect.play.apply(_this, [intensity, !!children]);
+                if (!effect.custom) setTimeout(function() {
+                  _this.style.removeProperty('backface-visibility');
+                  _this.style.transition = transitionOrig;
+                }, (speed + delay + staggerDelay) * 1000 * 2);
+              };
+              leave = function() {
+                var _this = this,
+                  transitionOrig;
+                if (effect.target) _this = this.querySelector(effect.target);
+                if (!effect.custom) {
+                  transitionOrig = _this.style.transition;
+                  _this.style.setProperty('backface-visibility', 'hidden');
+                  _this.style.transition = effect.transition(speed);
+                } else effect.transition.apply(_this, [speed]);
+                effect.rewind.apply(_this, [intensity, !!children]);
+                if (!effect.custom) setTimeout(function() {
+                  _this.style.removeProperty('backface-visibility');
+                  _this.style.transition = transitionOrig;
+                }, speed * 1000 * 2);
+              };
               if (effect.target) targetElement = e.querySelector(effect.target);
               else targetElement = e;
               if (children) children.forEach(function(targetElement) {
@@ -1753,13 +1850,30 @@
               });
             });
           },
+          expandTextNodes: function(e) {
+            var s, i, w, x;
+            for (i = 0; i < e.childNodes.length; i++) {
+              x = e.childNodes[i];
+              if (x.nodeType != Node.TEXT_NODE) continue;
+              s = x.nodeValue;
+              s = s.replace(this.regex, function(x, a) {
+                return ' < text - node > ' + a + ' < /text-node>';
+              });
+              w = document.createElement('text-node');
+              w.innerHTML = s;
+              x.replaceWith(w);
+              while (w.childNodes.length > 0) {
+                w.parentNode.insertBefore(w.childNodes[0], w);
+              }
+              w.parentNode.removeChild(w);
+            }
+          },
         };
         onvisible.add('#text01', {
           style: 'fade-up',
           speed: 1000,
           intensity: 0,
           delay: 0,
-          staggerOrder: '',
           state: true,
           replay: false
         });
@@ -1768,7 +1882,6 @@
           speed: 1000,
           intensity: 1,
           delay: 0,
-          staggerOrder: '',
           state: true,
           replay: false
         });
@@ -1777,7 +1890,6 @@
           speed: 1000,
           intensity: 0,
           delay: 0,
-          staggerOrder: '',
           state: true,
           replay: false
         });

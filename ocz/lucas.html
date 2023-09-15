@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html class=" qutwasb idc0_347" lang="en">
+<html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>v3rtual</title>
+    <title>Lucas</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light only">
-    <meta name="description" content="v3rtual's positive trigger list.">
-    <meta property="og:site_name" content="v3rtual ptl">
-    <meta property="og:title" content="v3rtual ptl">
+    <meta name="description" content="Lucas Hayes' Character Sheet.">
+    <meta property="og:site_name" content="Lucas">
+    <meta property="og:title" content="Lucas">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="v3rtual's positive trigger list.">
+    <meta property="og:description" content="Lucas Hayes' Character Sheet.">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="800">
+    <meta property="og:url" content="https://v3rtual.carrd.co">
+    <meta property="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://v3rtual.carrd.co">
+    <link href="https://fonts.googleapis.com/css2?display=swap&amp;family=Work+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700" rel="stylesheet" type="text/css">
     <style>
       html,
       body,
@@ -195,7 +197,7 @@
         transform: scale(1);
         width: 100vw;
         z-index: 0;
-        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20preserveAspectRatio%3D%22none%22%3E%20%3Cstyle%3E%20path%20%7B%20stroke-linecap%3A%20square%3B%20stroke-width%3A%202.01px%3B%20stroke%3A%20rgba(219,175,169,0.188)%3B%20vector-effect%3A%20non-scaling-stroke%3B%20%7D%20%3C%2Fstyle%3E%20%3Cpath%20d%3D%22M%20256%20192%20L%20256%20320%20M%20192%20256%20L%20320%20256%22%20%2F%3E%3C%2Fsvg%3E'), linear-gradient(45deg, rgba(17, 139, 0, 0.69) 0%, rgba(14, 107, 0, 0.753) 60%), url('file:///C|/Users/Lucien/Desktop/assets/images/bg.jpg?v=1ceb46f6');
+        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20preserveAspectRatio%3D%22none%22%3E%20%3Cstyle%3E%20path%20%7B%20stroke-linecap%3A%20square%3B%20stroke-width%3A%202.01px%3B%20stroke%3A%20rgba(219,175,169,0.188)%3B%20vector-effect%3A%20non-scaling-stroke%3B%20%7D%20%3C%2Fstyle%3E%20%3Cpath%20d%3D%22M%20256%20192%20L%20256%20320%20M%20192%20256%20L%20320%20256%22%20%2F%3E%3C%2Fsvg%3E'), linear-gradient(45deg, rgba(74, 168, 117, 0.69) 29%, rgba(87, 186, 217, 0.753) 43%), url('assets/images/bg.jpg?v=9eea066e');
         background-size: 62px, cover, cover;
         background-position: center, 0% 0%, center;
         background-repeat: repeat, repeat, repeat;
@@ -252,18 +254,15 @@
       }
 
       code {
-    background-color: rgba(144, 0, 0, 0.25);
-    border-radius: 0.25em;
-    font-family: 'Lucida Console', 'Courier New', monospace;
-    font-size: 0.47em;
-    font-weight: normal;
-    letter-spacing: 0;
-    margin-top: 0;
-    margin-right: 0em;
-    margin-left: 0em;
-    margin-bottom: 0;
-    padding: 0.25em 0.5em;
-    text-indent: 0;
+        background-color: rgba(144, 144, 144, 0.25);
+        border-radius: 0.25em;
+        font-family: 'Lucida Console', 'Courier New', monospace;
+        font-size: 0.9em;
+        font-weight: normal;
+        letter-spacing: 0;
+        margin: 0 0.25em;
+        padding: 0.25em 0.5em;
+        text-indent: 0;
       }
 
       mark {
@@ -407,6 +406,41 @@
         transition: none !important;
       }
 
+      @keyframes loading-spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .deferred:before {
+        content: '';
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -2rem 0 0 -2rem;
+        animation: loading-spinner 1s infinite linear;
+        transition: opacity 0.25s ease;
+        transition-delay: 0.5s;
+        opacity: 0;
+        z-index: -1;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTZweCIgaGVpZ2h0PSI5NnB4IiB2aWV3Qm94PSIwIDAgOTYgOTYiIHpvb21BbmRQYW49ImRpc2FibGUiPjxzdHlsZT5jaXJjbGUge2ZpbGw6IHRyYW5zcGFyZW50OyBzdHJva2U6ICNmZmY7IHN0cm9rZS13aWR0aDogMS41cHg7IH08L3N0eWxlPjxkZWZzPjxjbGlwUGF0aCBpZD0iY29ybmVyIj48cG9seWdvbiBwb2ludHM9IjAsMCA0OCwwIDQ4LDQ4IDk2LDQ4IDk2LDk2IDAsOTYiIC8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI2Nvcm5lcikiPjxjaXJjbGUgY3g9IjQ4IiBjeT0iNDgiIHI9IjMyIi8+PC9nPjwvc3ZnPg==');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 3rem;
+      }
+
+      .deferred.loading:before {
+        opacity: 0.35;
+        z-index: 0;
+      }
+
       h1,
       h2,
       h3,
@@ -451,12 +485,13 @@
       }
 
       #text01 {
+        text-align: center;
         color: #FFFFFF;
         font-family: 'Work Sans', sans-serif;
         letter-spacing: -0.175rem;
         width: 100%;
-        font-size: 3.75em;
-        line-height: 1;
+        font-size: 3em;
+        line-height: 1.125;
         font-weight: 500;
       }
 
@@ -497,6 +532,138 @@
 
       #text02 span.p:nth-child(n + 2) {
         margin-top: 1rem;
+      }
+
+      .image {
+        display: block;
+        line-height: 0;
+        max-width: 100%;
+        position: relative;
+      }
+
+      .image .frame {
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        vertical-align: top;
+        width: 100%;
+      }
+
+      .image .frame img {
+        border-radius: 0 !important;
+        max-width: 100%;
+        vertical-align: top;
+        width: inherit;
+      }
+
+      .image.full .frame {
+        display: block;
+      }
+
+      .image.full:first-child .frame {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+
+      .image.full:last-child .frame {
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+
+      #image01 {
+        text-align: center;
+      }
+
+      #image01 .frame {
+        width: 15rem;
+        border-radius: 1.875rem;
+        transition: none;
+      }
+
+      #image01 .frame img {
+        transition: none;
+      }
+
+      .gallery .inner {
+        display: inline-block;
+        max-width: 100%;
+        vertical-align: middle;
+      }
+
+      .gallery ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: var(--flex-alignment);
+      }
+
+      .gallery ul li {
+        position: relative;
+      }
+
+      .gallery ul li .thumbnail {
+        border-radius: inherit;
+        position: relative;
+      }
+
+      .gallery ul li .frame {
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translate3d(0, 0, 0);
+        display: inline-block;
+        overflow: hidden;
+        vertical-align: top;
+      }
+
+      .gallery ul li img {
+        margin: 0;
+        max-width: 100%;
+        vertical-align: top;
+        width: auto;
+      }
+
+      .gallery ul li .caption {
+        width: 100%;
+      }
+
+      .gallery ul li .caption p {
+        width: 100%;
+      }
+
+      #gallery01 {
+        text-align: center;
+      }
+
+      #gallery01 .inner {
+        max-width: 78rem;
+      }
+
+      #gallery01 ul {
+        justify-content: center;
+        gap: 4rem;
+      }
+
+      #gallery01 ul li {
+        border-radius: 0rem;
+        display: inline-block;
+      }
+
+      #gallery01 ul li .frame {
+        border-radius: 0rem;
+      }
+
+      #gallery01 ul li .thumbnail {
+        display: block;
+        transition: none;
+      }
+
+      #gallery01 ul li img {
+        height: auto;
+        max-height: 8.625rem;
+      }
+
+      #gallery01 ul li .thumbnail img {
+        transition: none;
       }
 
       .container {
@@ -543,7 +710,7 @@
         width: 100%;
         align-items: flex-end;
         justify-content: flex-start;
-        background-color: rgba(0, 140, 0, 0.678);
+        background-color: rgba(112, 99, 194, 0.678);
         -webkit-backdrop-filter: blur(0.525rem);
         backdrop-filter: blur(0.525rem);
         box-shadow: 0rem 0.625rem 3.5rem 0.75rem rgba(74, 26, 19, 0.259);
@@ -824,6 +991,18 @@
           line-height: 1.125;
         }
 
+        #image01 .frame {
+          width: 15rem;
+        }
+
+        #gallery01 ul li img {
+          max-height: 6.46875rem;
+        }
+
+        #gallery01 ul {
+          gap: 2rem;
+        }
+
         #container01 {
           min-height: 28rem;
         }
@@ -949,6 +1128,10 @@
           font-size: 1em;
         }
 
+        #gallery01 ul {
+          gap: 1.5rem;
+        }
+
         #container01>.wrapper>.inner {
           --gutters: 1.5rem;
           --padding-horizontal: 1.125rem;
@@ -994,18 +1177,57 @@
             <div class="wrapper">
               <div class="inner">
                 <h1 id="text01" style="opacity: 1; transform: none;">
-                  <code>positive trigger list</code>
+                  <code>Lucas Hayes</code>
                 </h1>
+				<div id="image01" class="image"><br>
+				<span class="frame">
+                  <img src="https://v3rtual.github.io/ocs/lucas_files/image01.png" data-src="done" alt="" style="opacity: 1; transition: opacity 0.375s ease-in-out 0s;"><br>
+					</span>
+                </div>
+				<div id="gallery01" class="gallery">
+                  <div class="inner">
+                    <ul>
+                      <li>
+                        <span class="frame">
+                          <img src="https://v3rtual.github.io/ocs/lucas_files/b4783068.png" alt="The appearance of Lucas Hayes' Soul.">
+                        </span>
+                      </li>
+                      <li>
+                        <span class="frame">
+                          <img src="https://v3rtual.github.io/ocs/lucas_files/f9e270b3.png" alt="The appearance of Lucas Hayes' Body.">
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <p id="text02" style="opacity: 1; transform: none;">
-                  <span class="p">i like these things!!1! (ordered)</span>
-                  <span class="p">1. Little Big Planet</span>
-                  <span class="p">2. Deep Rock Galactic</span>
-                  <span class="p">3. Ultrakill</span>
-				  <span class="p">4. Geometry Dash</span>
-                  <span class="p">5. The Binding of Isaac</span>
-                  <span class="p">6. 3D printing</span>
-				  <span class="p">7. Detroit: Become Human</span>
-				  <span class="p">8. The Word "Tremendous"</span>
+                  <span class="p">
+                    <strong>Name</strong>
+                    <br> Lucas Hayes </span>
+                  <span class="p">
+                    <strong>Object</strong>
+                    <br> A dead notebook bound to it's own soul. </span>
+                  <span class="p">
+                    <strong>Age</strong>
+                    <br> Due to him being an ancient pirate, he is 4722 years old. </span>
+                  <span class="p">
+                    <strong>Gender</strong>
+                    <br> Male, He/Him </span>
+                  <span class="p">
+                    <strong>Personality</strong>
+                    <br> Lucas possesses a natural cunning and resourcefulness that has been honed through years of experience on the high seas. They may have a knack for thinking quickly on their feet and finding creative solutions to problems, whether that involves navigating treacherous waters, or outwitting rivals. Despite their resourcefulness, Lucas may not always be forthcoming with their ideas or strategies. They may keep their plans close to the chest, revealing only as much information as is necessary to achieve their objectives. This secretive nature may be a reflection of the character's tormented past, as well as a reflection of their general mistrust of others. </span>
+                  <span class="p">
+                    <strong>Past Camps</strong>
+                    <br> Caged in an Old Wildfire (Ended, Survived) </span>
+                  <span class="p">
+                    <strong>Fun facts</strong>
+                    <br> This is a binding of isaac reference!! Binding of isaac tainted forgotten!! <br> He's pretty much immortal. There is only one way to kill him, and that would be to break the ancient spell inside of him, though nobody of this age has the knowledge of the arcana used many many years ago, except for him; and he does not want to reveal that knowledge any time soon. </span>
+                  <span class="p">
+                    <strong>Lore</strong>
+                    <br> Lucas Hayes, an infamous pirate, plundered and pillaged ruthlessly until his actions caught up with him. Betraying his crewmates, engaging in dark magic, and committing unspeakable cruelty, his fate was sealed when he ordered the execution of a young cabin boy. Unbeknownst to him, the boy was the son of a powerful, now long-forgotten sorcerer who cursed Lucas, binding his soul to his dead body and forcing him to carry its weight eternally. The ancient spells were inscribed into Lucas. </span>
+					<span class="p">
+                    <strong>Voice Claim</strong>
+                    <br> <a href="https://www.tiktok.com/@samsonite1890/video/7228724243956272430">Samsonite1890.</a> </span>
                 </p>
               </div>
             </div>
@@ -1398,6 +1620,55 @@
           }
         };
         scrollEvents.init();
+        (function() {
+          var items = $$('.deferred'),
+            loadHandler, enterHandler;
+          loadHandler = function() {
+            var i = this,
+              p = this.parentElement;
+            if (i.dataset.src !== 'done') return;
+            if (Date.now() - i._startLoad < 375) {
+              p.classList.remove('loading');
+              p.style.backgroundImage = 'none';
+              i.style.transition = '';
+              i.style.opacity = 1;
+            } else {
+              p.classList.remove('loading');
+              i.style.opacity = 1;
+              setTimeout(function() {
+                i.style.backgroundImage = 'none';
+                i.style.transition = '';
+              }, 375);
+            }
+          };
+          enterHandler = function() {
+            var i = this,
+              p = this.parentElement,
+              src;
+            src = i.dataset.src;
+            i.dataset.src = 'done';
+            p.classList.add('loading');
+            i._startLoad = Date.now();
+            i.src = src;
+          };
+          items.forEach(function(p) {
+            var i = p.firstElementChild;
+            if (!p.classList.contains('enclosed')) {
+              p.style.backgroundImage = 'url(' + i.src + ')';
+              p.style.backgroundSize = '100% 100%';
+              p.style.backgroundPosition = 'top left';
+              p.style.backgroundRepeat = 'no-repeat';
+            }
+            i.style.opacity = 0;
+            i.style.transition = 'opacity 0.375s ease-in-out';
+            i.addEventListener('load', loadHandler);
+            scrollEvents.add({
+              element: i,
+              enter: enterHandler,
+              offset: 250,
+            });
+          });
+        })();
         var onvisible = {
           effects: {
             'blur-in': {
@@ -1658,14 +1929,17 @@
               },
             },
           },
+          regex: new RegExp('([a-zA-Z0-9\.\,\-\_\"\'\?\!\:\;\#\@\#$\%\&\(\)\{\}]+)', 'g'),
           add: function(selector, settings) {
-            var style = settings.style in this.effects ? settings.style : 'fade',
+            var _this = this,
+              style = settings.style in this.effects ? settings.style : 'fade',
               speed = parseInt('speed' in settings ? settings.speed : 1000) / 1000,
               intensity = ((parseInt('intensity' in settings ? settings.intensity : 5) / 10) * 1.75) + 0.25,
               delay = parseInt('delay' in settings ? settings.delay : 0) / 1000,
               replay = 'replay' in settings ? settings.replay : false,
-              stagger = 'stagger' in settings ? (parseInt(settings.stagger) > -125 ? (parseInt(settings.stagger) / 1000) : false) : false,
+              stagger = 'stagger' in settings ? (parseInt(settings.stagger) >= 0 ? (parseInt(settings.stagger) / 1000) : false) : false,
               staggerOrder = 'staggerOrder' in settings ? settings.staggerOrder : 'default',
+              staggerSelector = 'staggerSelector' in settings ? settings.staggerSelector : null,
               state = 'state' in settings ? settings.state : null,
               effect = this.effects[style];
             if ('CARRD_DISABLE_ANIMATION' in window) {
@@ -1675,38 +1949,39 @@
               return;
             }
             $$(selector).forEach(function(e) {
-              var children = (stagger !== false) ? e.querySelectorAll(':scope > li, :scope ul > li') : null,
-                enter = function(staggerDelay = 0) {
-                  var _this = this,
-                    transitionOrig;
-                  if (effect.target) _this = this.querySelector(effect.target);
-                  if (!effect.custom) {
-                    transitionOrig = _this.style.transition;
-                    _this.style.setProperty('backface-visibility', 'hidden');
-                    _this.style.transition = effect.transition(speed, delay + staggerDelay);
-                  } else effect.transition.apply(_this, [speed, delay + staggerDelay]);
-                  effect.play.apply(_this, [intensity, !!children]);
-                  if (!effect.custom) setTimeout(function() {
-                    _this.style.removeProperty('backface-visibility');
-                    _this.style.transition = transitionOrig;
-                  }, (speed + delay + staggerDelay) * 1000 * 2);
-                },
-                leave = function() {
-                  var _this = this,
-                    transitionOrig;
-                  if (effect.target) _this = this.querySelector(effect.target);
-                  if (!effect.custom) {
-                    transitionOrig = _this.style.transition;
-                    _this.style.setProperty('backface-visibility', 'hidden');
-                    _this.style.transition = effect.transition(speed);
-                  } else effect.transition.apply(_this, [speed]);
-                  effect.rewind.apply(_this, [intensity, !!children]);
-                  if (!effect.custom) setTimeout(function() {
-                    _this.style.removeProperty('backface-visibility');
-                    _this.style.transition = transitionOrig;
-                  }, speed * 1000 * 2);
-                },
-                targetElement, triggerElement;
+              var children, enter, leave, targetElement, triggerElement;
+              if (stagger !== false && staggerSelector == ':scope > *') _this.expandTextNodes(e);
+              children = (stagger !== false && staggerSelector) ? e.querySelectorAll(staggerSelector) : null;
+              enter = function(staggerDelay = 0) {
+                var _this = this,
+                  transitionOrig;
+                if (effect.target) _this = this.querySelector(effect.target);
+                if (!effect.custom) {
+                  transitionOrig = _this.style.transition;
+                  _this.style.setProperty('backface-visibility', 'hidden');
+                  _this.style.transition = effect.transition(speed, delay + staggerDelay);
+                } else effect.transition.apply(_this, [speed, delay + staggerDelay]);
+                effect.play.apply(_this, [intensity, !!children]);
+                if (!effect.custom) setTimeout(function() {
+                  _this.style.removeProperty('backface-visibility');
+                  _this.style.transition = transitionOrig;
+                }, (speed + delay + staggerDelay) * 1000 * 2);
+              };
+              leave = function() {
+                var _this = this,
+                  transitionOrig;
+                if (effect.target) _this = this.querySelector(effect.target);
+                if (!effect.custom) {
+                  transitionOrig = _this.style.transition;
+                  _this.style.setProperty('backface-visibility', 'hidden');
+                  _this.style.transition = effect.transition(speed);
+                } else effect.transition.apply(_this, [speed]);
+                effect.rewind.apply(_this, [intensity, !!children]);
+                if (!effect.custom) setTimeout(function() {
+                  _this.style.removeProperty('backface-visibility');
+                  _this.style.transition = transitionOrig;
+                }, speed * 1000 * 2);
+              };
               if (effect.target) targetElement = e.querySelector(effect.target);
               else targetElement = e;
               if (children) children.forEach(function(targetElement) {
@@ -1756,13 +2031,30 @@
               });
             });
           },
+          expandTextNodes: function(e) {
+            var s, i, w, x;
+            for (i = 0; i < e.childNodes.length; i++) {
+              x = e.childNodes[i];
+              if (x.nodeType != Node.TEXT_NODE) continue;
+              s = x.nodeValue;
+              s = s.replace(this.regex, function(x, a) {
+                return ' < text - node > ' + a + ' < /text-node>';
+              });
+              w = document.createElement('text-node');
+              w.innerHTML = s;
+              x.replaceWith(w);
+              while (w.childNodes.length > 0) {
+                w.parentNode.insertBefore(w.childNodes[0], w);
+              }
+              w.parentNode.removeChild(w);
+            }
+          },
         };
         onvisible.add('#text01', {
           style: 'fade-up',
           speed: 1000,
           intensity: 0,
           delay: 0,
-          staggerOrder: '',
           state: true,
           replay: false
         });
@@ -1771,7 +2063,6 @@
           speed: 1000,
           intensity: 1,
           delay: 0,
-          staggerOrder: '',
           state: true,
           replay: false
         });
@@ -1780,7 +2071,6 @@
           speed: 1000,
           intensity: 0,
           delay: 0,
-          staggerOrder: '',
           state: true,
           replay: false
         });
