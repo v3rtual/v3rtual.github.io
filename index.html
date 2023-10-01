@@ -15,20 +15,15 @@ body, html {
   		let h = today.getUTCHours();
   		let m = today.getUTCMinutes();
   		let s = today.getUTCSeconds();
-		h = h-5
-		var xm = "PM";
+		h = h-4
+		if (h<0) {h=24+h};
   		m = checkTime(m);
   		s = checkTime(s);
-		if (h < 1) {
-			h = 13+h
-  		} else {
-      		if (h > 12) {
-          	h = h - 12;
-      		xm = "AM"
-			}
-  		}
+		var xm = "AM";
+		if (h>=12) {var xm = "PM"; h=h-12;};
+		if (h==0) {h = 12};
   		document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
-		document.getElementById('xm').innerHTML =  xm;
+		document.getElementById('xm').innerHTML = xm;
   		setTimeout(startTime, 1000);
 	}
 	function checkTime(i) {
@@ -50,7 +45,7 @@ body, html {
   <h1>v3rtual ♾️</h1>
   <div class="funky">"Hi chat!!1"</div>
   <p>Toki!1 My name iz Lucien. I would highly prefer, though, that i am called by my uzername online.</p>
-  <p>I use he/him/his and ona/ona/onas pronounz!1</p>
+  <p>I uze he/him/his and ona/ona/onas pronounz!1</p>
   <p>I am 14 yearz old!</p>
   <p>I uze an s=z typing quirk and a !≈1 typing quirk!1!</p>
   <p>My time zone iz EST and it iz currently <none id="time"></none> <none id="xm"></none> for me!1</p>
