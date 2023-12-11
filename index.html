@@ -1,56 +1,153 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="title" content="sona mi">
-<link rel="stylesheet" href="css.css">
-<style>
-body, html {
-  background-image: url("backs/avalonia.jpg");
-}
-</style>
-<script>
-	function startTime() {
-		const today = new Date();
-  		let h = today.getUTCHours();
-  		let m = today.getUTCMinutes();
-  		let s = today.getUTCSeconds();
-		h = h-4
-		if (h<0) {h=24+h};
-  		m = checkTime(m);
-  		s = checkTime(s);
-		var xm = "AM";
-		if (h>=12) {var xm = "PM"; h=h-12;};
-		if (h==0) {h = 12};
-  		document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
-		document.getElementById('xm').innerHTML = xm;
-  		setTimeout(startTime, 1000);
-	}
-	function checkTime(i) {
-  		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  		return i;
-	}
-</script>
-<nav class="navigation">
-	<a href="index.html"><span>k</span></a>
-    <a href="ptl.html"><span>2</span></a>
-    <a href="ntl.html"><span>3</span></a>
-    <a href="intereztz.html"><span>9</span></a>
-	<a href="ocz/index.html"><span>a</span></a>
-</nav>
-</head>
-<body onload="startTime()">
-<audio autoplay loop src="muzic/pod.ogg"></audio>
-<div class="bg-text">
-  <h1>v3rtual ♾️</h1>
-  <div class="funky">"Hi chat!!1"</div>
-  <p>Toki!1 My name iz Lucien. I would highly prefer, though, that i am called by my uzername online.</p>
-  <p>I uze he/him/his and ona/ona/onas pronounz!1</p>
-  <p>I am 14 yearz old!</p>
-  <p>I uze an s=z typing quirk and a !≈1 typing quirk!1!</p>
-  <p>My time zone iz EST and it iz currently <none id="time"></none> <none id="xm"></none> for me!1</p>
-  <p>Mi toki lili e toki pona li kama sona e toki pona!!1 </p>
-</div>
-
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>v3rtual</title>
+		<script>
+			var __adobewebfontsappname__ = "dreamweaver"
+		</script>
+		<script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
+		<link href="AboutPageAssets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="parallax">
+			<div class="parallax-layer layer1 innercontent">
+				<header>
+					<div class="profileLogo">
+						<p class="logoPlaceholder">
+							<span> v3rtual's site </span>
+						</p>
+					</div>
+					<div class="profilePhoto">
+						<img src="AboutPageAssets/images/profilephoto.png" alt="v3rtual's profile picture. depicts a green version of the VirtualBox logo, taking a little nap." style="object-fit:contain; width: 92%; height: 100%;">
+					</div>
+					<!-- Identity details -->
+					<section class="profileHeader">
+						<h1>v3rtual</h1>
+						<h3>REALLY AWESOME DUDE</h3>
+						<hr>
+						<p>Hello there! My name is Lucien, but I heavily prefer being called v3rtual online.</p>
+						<p>I am 14 years old, and my birthday is on February 9th. I use ona/ona/onas and he/him/his pronouns. I am autistic. Also, please do not use they/them pronouns on me.</p>
+						<p>I use an s=z typing quirk and  an !≈1 typing quirk, however if you have difficulty reading with them or ask me I will not use them around you.</p>
+						<p>⠀</p>
+						<p>mi ken toki e lili toki pona. sina toki pona la o toki tawa mi. mi wile olin e jan pi toki pona.</p>
+						<p>Please use tonetags as much as you can around me, it's super helpful for me.</p>
+					</section>
+					<!-- Links to socials -->
+					<aside class="socialNetworkNavBar">
+						<div class="socialNetworkNav">
+							<a href="https://www.tiktok.com/@v3rtual">
+								<img src="AboutPageAssets/images/tiktok.png" alt="TikTok link button" style="height: 79px">
+							</a>
+						</div>
+						<div class="socialNetworkNav">
+							<a href="https://https://discord.gg/queVGDZHch">
+								<img src="AboutPageAssets/images/discord.webp" alt="Discord link button" style="height: 79px">
+							</a>
+						</div>
+						<div class="socialNetworkNav">
+							<a href="https://github.com/v3rtual">
+								<img src="AboutPageAssets/images/github.png" alt="Github link button" style="height: 79px">
+							</a>
+						</div>
+					</aside>
+				</header>
+				<section class="mainContent">
+					<!-- Socials -->
+					<section class="section1">
+						<h2 class="sectionTitle">Socials</h2>
+						<hr class="sectionTitleRule">
+						<hr class="sectionTitleRule2">
+						<div class="section1Content">
+							<p>
+								<span>TikTok :</span> @v3rtual
+							</p>
+							<p>
+								<span>Discord :</span> v3rtual
+							</p>
+							<p>
+								<span>Github :</span> v3rtual
+							</p>
+							<p> <span>Discord Server :</span> <a href="https://discord.gg/z7yKRxzywS">v3rtual's server</a></p>
+						</div>
+					</section>
+					<!-- Extra Info -->
+					<section class="section2">
+						<h2 class="sectionTitle">interests</h2>
+						<hr class="sectionTitleRule">
+						<hr class="sectionTitleRule2">
+						<!-- My interests  -->
+						<article class="section2Content">
+							<h2 class="sectionContentTitle">My Interests</h2>
+							<h3 class="sectionContentSubTitle">This list is not in any particular order.</h3>
+							<ul class="sectionContent">
+								<p> - Object Shows</p>
+								<p> - Geometry Dash</p>
+								<p> - The Binding of Isaac</p>
+								<p> - Deep Rock Galactic</p>
+								<p> - Ultrakill</p>
+								<p> - Little Big Planet</p>
+								<p> - 3D Printing</p>
+								<p> - Web Development</p>
+								<p> - Conlangs (Especially toki pona)</p>
+							</ul>
+						</article>
+					</section>
+					<section class="section2">
+						<h2 class="sectionTitle">Triggerlists</h2>
+						<hr class="sectionTitleRule">
+						<hr class="sectionTitleRule2">
+						<article class="section2Content">
+							<h2 class="sectionContentTitle"> Positive Triggerlist</h2>
+							<h3 class="sectionContentSubTitle">This list is ordered from most to least. These usually only apply if I don't already know that you know about them.</h3>
+							<ul class="sectionContent">
+								<p> - Any mention of the Little Big Planet series</p>
+								<p> - Mentions of object shows</p>
+								<p> - Use or mentions of the language of toki pona </p>
+								<p> - Mentions of Deep Rock Galactic</p>
+								<p> - The word "tremendous"</p>
+							</ul>
+							<h2 class="sectionContentTitle"> Negative Triggerlist</h2>
+							<h3 class="sectionContentSubTitle">This list is not ordered. Click on text to reveal.</h3>
+							<ul class="sectionContent">
+								<p class="spoiler"> - Telling me that I talk to much, <strong> telling me to shut up</strong>, or anything of that sort, even if you are saying it jokingly.</p>
+								<p class="spoiler"> - Insulting my interests or making fun of me for my interests.</p>
+								<p class="spoiler"> - Certain typing styles where proper punctuation and capitalization is used, but proper grammar is not, and where acronyms like "lol" are used, <strong>especially if you are older than me.</strong> Example: "I'm going to eat yogurt. I'm quite fond of it, lol."</p>
+								<p class="spoiler"> - Asking me about my time on discord between 2017 and 2019... please dont do this</p>
+								<p class="spoiler"> - Telling me to kill myself or to die, or anything like that</p>
+								<p class="spoiler"> - and then the obvious shit, NSFW topics, gore, etc.</p>
+							</ul>
+						</article>
+					</section>
+					<!-- extra links -->
+					<aside class="externalResourcesNav">
+						<a href="ocs.html">
+							<div class="externalResources">
+								<a title="ocs">oc list</a>
+							</div>
+						</a>
+						<span class="stretch"></span>
+						<a href="https://tokipona.org">
+							<div class="externalResources">
+								<a title="toki">toki pona information</a>
+							</div>
+						</a>
+						<span class="stretch"></span>
+						<a href="https://discord.gg/z7yKRxzywS">
+							<div class="externalResources">
+								<a title="join">join my server</a>
+							</div>
+						</a>
+					</aside>
+				</section>
+				<footer>
+					<hr>
+					<p class="footerDisclaimer">site made without carrd or anything like it. i love css</p>
+					<p class="footerNote">v3rtual</p>
+				</footer>
+			</div>
+			<div class="parallax-layer layer2"></div>
+		</div>
+	</body>
 </html>
