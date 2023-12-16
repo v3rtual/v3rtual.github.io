@@ -12,6 +12,10 @@
   background-color: inherit;
   color: inherit;
 }
+.spoiler:hover{
+  background-color: inherit;
+  color: inherit;
+}
 
 .parallax {
 	height: 100vh;
