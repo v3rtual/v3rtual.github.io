@@ -10236,7 +10236,7 @@ a.text-dark:hover, a.text-dark:focus {
   overflow: hidden;
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 50%;
   left: 0;
   right: 0;
 }
@@ -10249,7 +10249,7 @@ a.text-dark:hover, a.text-dark:focus {
     radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
     radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
     radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
-  background-repeat: repeat;
+  background-repeat: round;
   background-size: 200px 200px;
   animation: zoom 5s infinite;
   opacity: 0;
