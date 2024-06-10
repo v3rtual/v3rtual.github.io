@@ -51,10 +51,7 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
-#space {
-  clip-path: inset(0 0 35% 0);
-  /* Also can take single values to make all sides the same, or 2 values (vert/horz), or 3 values (top/horz/bottom). */
-}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -5246,28 +5243,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
 
-.jumbotron {
-	z-index: 1
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-  border-radius: 0.3rem;
-  background-color: black;
-  background: linear-gradient(217deg, rgba(5,10,0,.8), rgba(0,20,0,0) 100%),
-            linear-gradient(127deg, rgba(0,10,0,.8), rgba(0,20,0,0) 100%),
-            linear-gradient(336deg, rgba(0,5,5,.8), rgba(0,35,0,0) 100%);
-}
 
-@media (min-width: 576px) {
-  .jumbotron {
-    padding: 4rem 2rem;
-  }
-}
-
-.jumbotron-fluid {
-  padding-right: 0;
-  padding-left: 0;
-  border-radius: 0;
-}
 
 .alert {
   position: relative;
@@ -10236,13 +10212,30 @@ a.text-dark:hover, a.text-dark:focus {
 /* Stars 
 ------------------------------------- */
 
-#space, .stars {
-  overflow: hidden;
+.stars {
+	overflow: hidden;
   position: absolute;
-  top: 0%;
-  bottom: 25%;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
+}
+#space {
+	overflow: hidden;
+	position:sticky;
+	  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+  background-color: black;
+  background: linear-gradient(217deg, rgba(5,10,0,.8), rgba(0,20,0,0) 100%),
+            linear-gradient(127deg, rgba(0,10,0,.8), rgba(0,20,0,0) 100%),
+            linear-gradient(336deg, rgba(0,5,5,.8), rgba(0,35,0,0) 100%);
 }
 
 .stars {
@@ -10255,10 +10248,22 @@ a.text-dark:hover, a.text-dark:focus {
     radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
     radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
   background-repeat: round;
-  background-size: 200px 200px;
+  background-size: 200px 100px;
   animation: zoom 5s infinite;
   opacity: 0;
 }
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 4rem 2rem;
+  }
+}
+
+.jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  border-radius: 0;
+}
+
 
 .stars:nth-child(1) {
   background-position: 50% 50%;
