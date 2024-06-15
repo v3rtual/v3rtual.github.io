@@ -1,4 +1,26 @@
 <!DOCTYPE html>
+	<script>
+		function startTime() {
+			const today = new Date();
+			let h = today.getUTCHours();
+			let m = today.getUTCMinutes();
+  			let s = today.getUTCSeconds();
+			h = h-4
+			if (h<0) {h=24+h};
+  			m = checkTime(m);
+  			s = checkTime(s);
+			var xm = "AM";
+			if (h>=12) {var xm = "PM"; h=h-12;};
+			if (h==0) {h = 12};
+  			document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+			document.getElementById('xm').innerHTML = xm;
+			setTimeout(startTime, 1000);
+		}
+		function checkTime(i) {
+  			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  			return i;
+		}
+	</script>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
