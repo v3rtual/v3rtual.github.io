@@ -19,6 +19,8 @@
 
 body {
 	margin: 0;
+}
+html {
 	background: linear-gradient(90deg, rgba(30,40,30), rgba(40,50,40))
 }
 
