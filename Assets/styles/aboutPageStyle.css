@@ -319,13 +319,14 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 	margin-top: 0px;
 	padding: 3%;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 .comm:hover {
 	background-color: rgba(153, 153, 153, 1);
 }
 
-.comm a {
+a .comm {
 	font-family: "Montserrat", sans-serif;
 	color: rgba(255, 255, 255, 1);
 	font-size: 14px;
