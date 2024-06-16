@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <script src="Assets/js/jquery-3.4.1.min.js"></script>
 <!--jquery they could NEVER make me hate you-->
-<script src="Assets/js/para/parallax.js"></script>
+<script src="Assets/js/para/parallax-1.js"></script>
 <script>
-function startTime() {
-	const today = new Date();
-	let h = today.getUTCHours();
-	let m = today.getUTCMinutes();
-	let s = today.getUTCSeconds();
-	h = h - 4
-	if(h < 0) {
-		h = 24 + h
-	};
-	m = checkTime(m);
-	s = checkTime(s);
-	var xm = "AM";
-	if(h >= 12) {
-		var xm = "PM";
-		h = h - 12;
-	};
-	if(h == 0) {
-		h = 12
-	};
-	document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-	document.getElementById('xm').innerHTML = xm;
-	setTimeout(startTime, 1000);
-}
+	function para() {
+		$('.parallax-window').parallax({
+			naturalWidth: 600,
+			naturalHeight: 400,
+			zIndex: -50,
+			mirrorContainer: $('div .outside')
+		});
+	}
+	// start time 
+	function startTime() {
+		const today = new Date();
+		let h = today.getUTCHours();
+		let m = today.getUTCMinutes();
+		let s = today.getUTCSeconds();
+		h = h - 4
+		if (h < 0) {
+			h = 24 + h
+		};
+		m = checkTime(m);
+		s = checkTime(s);
+		var xm = "AM";
+		if (h >= 12) {
+			var xm = "PM";
+			h = h - 12;
+		};
+		if (h == 0) {
+			h = 12
+		};
+		document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+		document.getElementById('xm').innerHTML = xm;
+		setTimeout(startTime, 1000);
+	}
 
-function checkTime(i) {
-	if(i < 10) {
-		i = "0" + i
-	}; // add zero in front of numbers < 10
-	return i;
-}
+	function checkTime(i) {
+		if (i < 10) {
+			i = "0" + i
+		}; // add zero in front of numbers < 10
+		return i;
+	}
+	// end time
+	// start music
 </script>
 
 <head>
@@ -40,17 +51,24 @@ function checkTime(i) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>v3rtual</title>
 	<script>
-	var __adobewebfontsappname__ = "dreamweaver"
+		var __adobewebfontsappname__ = "dreamweaver"
 	</script>
 	<script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
-	<link href="Assets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css"> </head>
+	<link href="Assets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css">
+</head>
 
-<body onload="startTime()">
+<body onload="startTime();">
 	<div data-parallax="scroll" data-image-src="Assets/images/back.png">
+		<div class="animation-wrapper">
+			<div class="particle particle-1"></div>
+				<div class="particle particle-2"></div>
+				<div class="particle particle-3"></div>
+		</div>
 		<div class="innercontent">
 			<header>
 				<div class="profileLogo">
-					<p class="logoPlaceholder"> <span> v3rtual's site </span> </p>
+					<p class="logoPlaceholder"> <span> v3rtual's site </span></p>
+					<p class="logoPlaceholder" style="float: right"> <span><img src="Assets/images/dancycat.gif" height="30pt" width="30pt"> now playing: <none id="song"></none></span></p>
 				</div>
 				<div class="profilePhoto"> <img src="Assets/images/profilephoto.png" alt="v3rtual's profile picture, A green version of the VirtualBox logo taking a nap." style="object-fit:contain; width: 92%; height: 100%;"> </div>
 				<!-- Identity details -->
@@ -61,7 +79,8 @@ function checkTime(i) {
 					<p>Hello there! My name is Lucien, but I heavily prefer being called v3rtual online.</p>
 					<p> Right now, it is
 						<none id="time">[Your browser does not support time access!]</none>
-						<none id="xm"></none> where I am. You'll usually be able to catch me between 7 AM and 11 PM. </p>
+						<none id="xm"></none> where I am. You'll usually be able to catch me between 7 AM and 11 PM.
+					</p>
 					<p>I am 15 years old, and my birthday is on February 9th. I use ona/ona/onas and he/hem/hems pronouns. Please do not use they/them pronouns on me.</p>
 					<p>I use an s=z typing quirk (infrequently) and an !≈1 typing quirk, however if you have difficulty reading with them or ask me I will not use them around you.</p>
 					<p>mi ken toki kepeken toki pona. sina toki pona la o toki tawa mi. mi wile olin e jan pi toki pona.</p>
@@ -77,8 +96,8 @@ function checkTime(i) {
 					<hr class="sectionTitleRule2">
 					<div class="section1Content">
 						<p> <strong>
-						<span>My commissions are </span>OPEN!
-						</strong> </p>
+								<span>My commissions are </span>OPEN!
+							</strong> </p>
 						<div class="comm"> <a href="commissions.html" class="fill-div">commission info</a> </div>
 					</div>
 				</section>
@@ -152,9 +171,10 @@ function checkTime(i) {
 			</section>
 			<footer>
 				<hr>
-				<p class="footerDisclaimer">site made without carrd or anything like it. i love css</p>
+				<p class="footerDisclaimer">i made this site myself! css, html, js <3 </p>
 				<p class="footerNote">v3rtual</p>
 			</footer>
 		</div>
 	</div>
+</div>
 </body>
