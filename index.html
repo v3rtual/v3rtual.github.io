@@ -1,167 +1,160 @@
 <!DOCTYPE html>
+<script src="Assets/js/jquery-3.4.1.min.js"></script>
+<!--jquery they could NEVER make me hate you-->
+<script src="Assets/js/para/parallax.js"></script>
+<script>
+function startTime() {
+	const today = new Date();
+	let h = today.getUTCHours();
+	let m = today.getUTCMinutes();
+	let s = today.getUTCSeconds();
+	h = h - 4
+	if(h < 0) {
+		h = 24 + h
+	};
+	m = checkTime(m);
+	s = checkTime(s);
+	var xm = "AM";
+	if(h >= 12) {
+		var xm = "PM";
+		h = h - 12;
+	};
+	if(h == 0) {
+		h = 12
+	};
+	document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+	document.getElementById('xm').innerHTML = xm;
+	setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+	if(i < 10) {
+		i = "0" + i
+	}; // add zero in front of numbers < 10
+	return i;
+}
+</script>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>v3rtual</title>
 	<script>
-		function startTime() {
-			const today = new Date();
-			let h = today.getUTCHours();
-			let m = today.getUTCMinutes();
-  			let s = today.getUTCSeconds();
-			h = h-4
-			if (h<0) {h=24+h};
-  			m = checkTime(m);
-  			s = checkTime(s);
-			var xm = "AM";
-			if (h>=12) {var xm = "PM"; h=h-12;};
-			if (h==0) {h = 12};
-  			document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-			document.getElementById('xm').innerHTML = xm;
-			setTimeout(startTime, 1000);
-		}
-		function checkTime(i) {
-  			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  			return i;
-		}
+	var __adobewebfontsappname__ = "dreamweaver"
 	</script>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>v3rtual</title>
-		<script>
-			var __adobewebfontsappname__ = "dreamweaver"
-		</script>
-		<script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
-		<link href="Assets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css">
-	</head>
-	<body onload="startTime()">
-		<div class="parallax">
-			<div class="parallax-layer layer1 innercontent">
-				<header>
-					<div class="profileLogo">
-						<p class="logoPlaceholder">
-							<span> v3rtual's site </span>
-						</p>
-					</div>
-					<div class="profilePhoto">
-						<img src="Assets/images/profilephoto.png" alt="v3rtual's profile picture, A green version of the VirtualBox logo taking a nap." style="object-fit:contain; width: 92%; height: 100%;">
-					</div>
-					<!-- Identity details -->
-					<section class="profileHeader">
-						<h1>v3rtual</h1>
-						<h3>REALLY AWESOME DUDE</h3>
-						<hr>
-						<p>Hello there! My name is Lucien, but I heavily prefer being called v3rtual online.</p>
-						<p> Right now, it is <none id="time">[Your browser does not support time access!]</none> <none id="xm"></none> where I am. You'll usually be able to catch me between 7 AM and 11 PM.</p> 
-						<p>I am 15 years old, and my birthday is on February 9th. I use ona/ona/onas and he/hem/hems pronouns. Please do not use they/them pronouns on me.</p>
-						<p>I use an s=z typing quirk (infrequently) and an !≈1 typing quirk, however if you have difficulty reading with them or ask me I will not use them around you.</p>
-						<p>mi ken toki kepeken toki pona. sina toki pona la o toki tawa mi. mi wile olin e jan pi toki pona.</p>
-						<p>Please use tonetags as much as you can around me, it's super helpful for me, as I'm autistic.</p>
-						<p>Here is my rentry link hoard: <a href="https://rentry.co/v3rtual">https://rentry.co/v3rtual</a></p>
-					</section>
-				</header>
-				<section class="mainContent">
-					<!-- Socials -->
-					<section class="section1">
-						<h2 class="sectionTitle">Commissions</h2>
-						<hr class="sectionTitleRule">
-						<hr class="sectionTitleRule2">
-						<div class="section1Content">
-							<p>
-								<strong>
-									<span>My commissions are </span>OPEN!
-								</strong>
-							</p>
-							<div class="comm">
-								<a href="commissions.html" class="fill-div">commission info</a>
-							</div>
-					  </div>
-					</section>
-					<section class="section1">
-						<h2 class="sectionTitle">Socials</h2>
-						<hr class="sectionTitleRule">
-						<hr class="sectionTitleRule2">
-						<div class="section1Content">
-							<p>
-								<span>TikTok :</span> @v3rtual
-							</p>
-							<p>
-								<span>Discord :</span> v3rtual
-							</p>
-							<p>
-								<span>Github :</span> v3rtual
-							</p>
-							<p> <span>Discord Server :</span> <a href="https://discord.gg/HUayd6ZEva">goiky canal</a></p>
-					  </div>
-					</section>
-					<!-- Extra Info -->
-					<section class="section2">
-						<h2 class="sectionTitle">interests</h2>
-						<hr class="sectionTitleRule">
-						<hr class="sectionTitleRule2">
-						<!-- My interests  -->
-						<article class="section2Content">
-							<h2 class="sectionContentTitle">My Interests</h2>
-							<h3 class="sectionContentSubTitle">This list is not in any particular order.</h3>
-							<ul class="sectionContent">
-								<p> - Object Shows</p>
-								<p> - Geometry Dash</p>
-								<p> - The Binding of Isaac</p>
-								<p> - Deep Rock Galactic</p>
-								<p> - Ultrakill</p>
-								<p> - Little Big Planet</p>
-								<p> - 3D Printing</p>
-								<p> - Web Development</p>
-								<p> - GTA V</p>
-								<p> - Conlangs (Especially toki pona)</p>
-							</ul>
-						</article>
-					</section>
-					<section class="section2">
-						<h2 class="sectionTitle">Before You Interact</h2>
-						<hr class="sectionTitleRule">
-						<hr class="sectionTitleRule2">
-						<article class="section2Content">
-							<h2 class="sectionContentTitle">DNI</h2>
-							<h3 class="sectionContentSubTitle">If you fit this criteria, do not attempt to interact with me.</h3>
-							<ul class="sectionContent">
-								<p> - Object Show Antis</p>
-								<p> - At or Under The Age of 11 Years old (in which case get offline?? its mad dangerous)</p>
-								<p> - RubricCube Defenders </p>
-								<p> - Non Tone-Clarifiers (People who refuse to use tonetags or explain their tone in messages)</p>
-								<p> - Basic DNI Criteria (homophobic, racist, proshippers, etc.)</p>
-							</ul>
-							<h2 class="sectionContentTitle"> Boundaries</h2>
-							<h3 class="sectionContentSubTitle">Failure to follow these without apologizing will get you Blocked. Click on text to reveal.</h3>
-							<ul class="sectionContent">
-								<p class="spoiler"> - Telling me that I talk to much, <strong> telling me to shut up</strong>, or anything of that sort, even if you are saying it jokingly.</p>
-								<p class="spoiler"> - Do not interact with me while under the influence of drugs.</p>
-								<p class="spoiler"> - Do not discuss any topic of drugs with me; even in a humorous context.</p>
-								<p class="spoiler"> - Insulting my interests or making fun of me for my interests.</p>
-								<p class="spoiler"> - Asking me about my time on discord between 2017 and 2019... please dont do this</p>
-								<p class="spoiler"> - Telling me to kill myself or to die, or anything like that</p>
-								<p class="spoiler"> - and then the obvious shit, discussing NSFW topics, gore, etc.</p>
-							</ul>
-						</article>
-					</section>
-					<!-- extra links -->
-					<aside class="externalResourcesNav">
-							<div class="externalResources">
-								<a href="commissions.html" class="fill-div">commission me</a>
-							</div>
-						<span class="stretch"></span>
-							<div class="externalResources">
-								<a href="https://tokipona.org" class="fill-div">toki pona information</a>
-							</div>
-						<span class="stretch"></span>
-							<div class="externalResources">
-								<a href="https://discord.gg/z7yKRxzywS" class="fill-div">join my server</a>
-							</div>
-					</aside>
-				</section>
-				<footer>
+	<script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
+	<link href="Assets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css"> </head>
+
+<body onload="startTime()">
+	<div data-parallax="scroll" data-image-src="Assets/images/back.png">
+		<div class="innercontent">
+			<header>
+				<div class="profileLogo">
+					<p class="logoPlaceholder"> <span> v3rtual's site </span> </p>
+				</div>
+				<div class="profilePhoto"> <img src="Assets/images/profilephoto.png" alt="v3rtual's profile picture, A green version of the VirtualBox logo taking a nap." style="object-fit:contain; width: 92%; height: 100%;"> </div>
+				<!-- Identity details -->
+				<section class="profileHeader">
+					<h1>v3rtual</h1>
+					<h3>REALLY AWESOME DUDE</h3>
 					<hr>
-					<p class="footerDisclaimer">site made without carrd or anything like it. i love css</p>
-					<p class="footerNote">v3rtual</p>
-				</footer>
-			</div>
-			<div class="parallax-layer layer2"></div>
+					<p>Hello there! My name is Lucien, but I heavily prefer being called v3rtual online.</p>
+					<p> Right now, it is
+						<none id="time">[Your browser does not support time access!]</none>
+						<none id="xm"></none> where I am. You'll usually be able to catch me between 7 AM and 11 PM. </p>
+					<p>I am 15 years old, and my birthday is on February 9th. I use ona/ona/onas and he/hem/hems pronouns. Please do not use they/them pronouns on me.</p>
+					<p>I use an s=z typing quirk (infrequently) and an !≈1 typing quirk, however if you have difficulty reading with them or ask me I will not use them around you.</p>
+					<p>mi ken toki kepeken toki pona. sina toki pona la o toki tawa mi. mi wile olin e jan pi toki pona.</p>
+					<p>Please use tonetags as much as you can around me, it's super helpful for me, as I'm autistic.</p>
+					<p>Here is my rentry link hoard: <a href="https://rentry.co/v3rtual">https://rentry.co/v3rtual</a></p>
+				</section>
+			</header>
+			<section class="mainContent">
+				<!-- Socials -->
+				<section class="section1">
+					<h2 class="sectionTitle">Commissions</h2>
+					<hr class="sectionTitleRule">
+					<hr class="sectionTitleRule2">
+					<div class="section1Content">
+						<p> <strong>
+						<span>My commissions are </span>OPEN!
+						</strong> </p>
+						<div class="comm"> <a href="commissions.html" class="fill-div">commission info</a> </div>
+					</div>
+				</section>
+				<section class="section1">
+					<h2 class="sectionTitle">Socials</h2>
+					<hr class="sectionTitleRule">
+					<hr class="sectionTitleRule2">
+					<div class="section1Content">
+						<p> <span>TikTok :</span> @v3rtual </p>
+						<p> <span>Discord :</span> v3rtual </p>
+						<p> <span>Github :</span> v3rtual </p>
+						<p> <span>Discord Server :</span> <a href="https://discord.gg/HUayd6ZEva">goiky canal</a></p>
+					</div>
+				</section>
+				<!-- Extra Info -->
+				<section class="section2">
+					<h2 class="sectionTitle">interests</h2>
+					<hr class="sectionTitleRule">
+					<hr class="sectionTitleRule2">
+					<!-- My interests  -->
+					<article class="section2Content">
+						<h2 class="sectionContentTitle">My Interests</h2>
+						<h3 class="sectionContentSubTitle">This list is not in any particular order.</h3>
+						<ul class="sectionContent">
+							<p> - Object Shows</p>
+							<p> - Geometry Dash</p>
+							<p> - The Binding of Isaac</p>
+							<p> - Deep Rock Galactic</p>
+							<p> - Ultrakill</p>
+							<p> - Little Big Planet</p>
+							<p> - 3D Printing</p>
+							<p> - Web Development</p>
+							<p> - GTA V</p>
+							<p> - Conlangs (Especially toki pona)</p>
+						</ul>
+					</article>
+				</section>
+				<section class="section2">
+					<h2 class="sectionTitle">Before You Interact</h2>
+					<hr class="sectionTitleRule">
+					<hr class="sectionTitleRule2">
+					<article class="section2Content">
+						<h2 class="sectionContentTitle">DNI</h2>
+						<h3 class="sectionContentSubTitle">If you fit this criteria, do not attempt to interact with me.</h3>
+						<ul class="sectionContent">
+							<p> - Object Show Antis</p>
+							<p> - At or Under The Age of 11 Years old (in which case get offline?? its mad dangerous)</p>
+							<p> - RubricCube Defenders </p>
+							<p> - Non Tone-Clarifiers (People who refuse to use tonetags or explain their tone in messages)</p>
+							<p> - Basic DNI Criteria (homophobic, racist, proshippers, etc.)</p>
+						</ul>
+						<h2 class="sectionContentTitle"> Boundaries</h2>
+						<h3 class="sectionContentSubTitle">Failure to follow these without apologizing will get you Blocked. Click on text to reveal.</h3>
+						<ul class="sectionContent">
+							<p class="spoiler"> - Telling me that I talk to much, <strong> telling me to shut up</strong>, or anything of that sort, even if you are saying it jokingly.</p>
+							<p class="spoiler"> - Do not interact with me while under the influence of drugs.</p>
+							<p class="spoiler"> - Do not discuss any topic of drugs with me; even in a humorous context.</p>
+							<p class="spoiler"> - Insulting my interests or making fun of me for my interests.</p>
+							<p class="spoiler"> - Asking me about my time on discord between 2017 and 2019... please dont do this</p>
+							<p class="spoiler"> - Telling me to kill myself or to die, or anything like that</p>
+							<p class="spoiler"> - and then the obvious shit, discussing NSFW topics, gore, etc.</p>
+						</ul>
+					</article>
+				</section>
+				<!-- extra links -->
+				<aside class="externalResourcesNav">
+					<div class="externalResources"> <a href="commissions.html" class="fill-div">commission me</a> </div> <span class="stretch"></span>
+					<div class="externalResources"> <a href="https://tokipona.org" class="fill-div">toki pona information</a> </div> <span class="stretch"></span>
+					<div class="externalResources"> <a href="https://discord.gg/z7yKRxzywS" class="fill-div">join my server</a> </div>
+				</aside>
+			</section>
+			<footer>
+				<hr>
+				<p class="footerDisclaimer">site made without carrd or anything like it. i love css</p>
+				<p class="footerNote">v3rtual</p>
+			</footer>
 		</div>
-	</body>
+	</div>
+</body>

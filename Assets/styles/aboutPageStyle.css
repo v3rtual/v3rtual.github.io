@@ -17,35 +17,9 @@
   color: inherit;
 }
 
-.parallax {
-	height: 100vh;
-	overflow-x: hidden;
-	overflow-y: visible;
-	perspective: 1px;
-}
-
-.parallax-layer {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-.layer1 {
-	transform: translateZ(0);
-}
-
-.layer2 {
-	transform: translateZ(-1px) scale(7.6);
-	background-image: url("../images/back.png");
-	background-size: 100%;
-	z-index: -1;
-	overflow-y: hidden;
-}
-
 body {
 	margin: 0;
+	background: linear-gradient(90deg, rgba(30,40,30), rgba(40,50,40))
 }
 
 .innercontent {
@@ -55,7 +29,7 @@ body {
 	max-width: 960px;
 	padding-left: 2.275%;
 	padding-right: 2.275%;
-	overflow:visible;
+	overflow: visible;
 }
 
 a.fill-div {
@@ -72,7 +46,7 @@ header {
 }
 
 header .profileLogo .logoPlaceholder {
-	background-color: #274C18;
+	background-color: #2C3B21;
 	width: 207px;
 	text-align: center;
 }
@@ -258,6 +232,9 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 	text-decoration: none;
 }
 /* Footer */
+footer hr {
+	opacity: 0%
+}
 footer .footerDisclaimer {
 	font-family: sans-serif;
 	font-size: 14px;
