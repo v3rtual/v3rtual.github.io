@@ -48,33 +48,49 @@
 		}
 	}
 	// Used like so
-	let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+	arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 	shuffle(arr);
-	var currentShuffleNumber = 0;
-	
-	function initMusic() {
-		var x = document.getElementById(arr[0])
-		startMusic(Math.random() * x.duration)
-	}
+	currentShuffleNumber = 0;
+	var currentAudio;
 	
 	function startMusic(offset) {
 		if ( currentShuffleNumber < 18 ) {
-			var currentAudio = document.getElementById(arr[currentShuffleNumber]); 
+			currentAudio = document.getElementById(arr[currentShuffleNumber]); 
 			currentAudio.play();
 			var filename = currentAudio.src.replace(/^.*[\\/]/, '')
 			document.getElementById('song').innerHTML = unescape(filename.replace('.mp3',''));
-			currentAudio.currentTime = offset;
+			currentAudio.currentTime = +offset;
 			currentShuffleNumber++;
-			var s = currentAudio.duration - offset
+			var s = currentAudio.duration - +offset;
 			var ms = s*1000
 			setTimeout(startMusic, ms);
 		}
+	}
+	
+	function pawsmusic() {
+		if ( currentAudio.paused == true ) {
+			currentAudio.play();
+			document.getElementById("kitty").src = "Assets/images/dancycat.gif"
+		} else {
+			currentAudio.pause();
+			document.getElementById("kitty").src = "Assets/images/sadcat.png"
+		};
 	}
 </script>
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="The Simply Extravagant website of the user commonly known as v3rtual." />
+    <meta property="og:site_name" content="v3rtual's site" />
+    <meta property="og:title" content="v3rtual" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="The Simply Extravagant website of the user commonly known as v3rtual." />
+    <meta property="og:image" content="Assets/images/v3rtual.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1300" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:url" content="https://v3rtual.github.io/" />
 	<title>v3rtual</title>
 	<script>
 		var __adobewebfontsappname__ = "dreamweaver"
@@ -100,7 +116,7 @@
 	<audio id="17" src="Assets/audio/Purgatori.mp3"></audio>
 </head>
 
-<body onload="startTime(); initMusic();">
+<body onload="startTime(); startMusic(Math.random() * currentShuffleNumber.duration);">
 	<div data-parallax="scroll" data-image-src="Assets/images/back.png">
 		<div class="animation-wrapper">
 			<div class="particle particle-1"></div>
@@ -112,7 +128,7 @@
 			<header>
 				<div class="profileLogo">
 					<p class="logoPlaceholder"> <span> v3rtual's site </span></p>
-					<p class="logoPlaceholder" style="float: right"> <span><img src="Assets/images/dancycat.gif" height="30pt" width="30pt"> now playing: <none id="song"></none></span></p>
+					<p class="logoPlaceholder" style="float: right"> <span><img src="Assets/images/dancycat.gif" height="30pt" width="30pt" onClick="pawsmusic()" id="kitty"> now playing: <none id="song"></none></span></p> 
 				</div>
 				<div class="profilePhoto"> <img src="Assets/images/profilephoto.png" alt="v3rtual's profile picture, A green version of the VirtualBox logo taking a nap." style="object-fit:contain; width: 92%; height: 100%;"> </div>
 				<!-- Identity details -->
