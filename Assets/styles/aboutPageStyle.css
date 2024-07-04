@@ -3,7 +3,7 @@
 /* Global Styles */
 
 .spoiler{
-  background-color: #061400;
+  background-color: #011D1C;
   color: transparent;
   user-select: none;
 }
@@ -21,7 +21,7 @@ body {
 	margin: 0;
 }
 html {
-	background: linear-gradient(90deg, rgba(30,40,30), rgba(40,50,40))
+	background: linear-gradient(90deg, #003b3f, #03323b)
 }
 
 .innercontent {
@@ -47,7 +47,7 @@ header {
 	display: block;
 }
 header .profileLogo .logoPlaceholder {
-	background-color: #2C3B21;
+	background-color: #16737C;
 	padding-left: 10pt;
 	padding-right: 10pt;
 	text-align: center;
@@ -268,7 +268,7 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 
 .section2 .sectionContentSubTitle {
 	font-family: sans-serif;
-	color: rgba(68, 67, 67, 1);
+	color: rgba(68, 90, 90, 1);
 	font-size: 14px;
 	font-weight: 400;
 }
@@ -286,7 +286,7 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 }
 
 .mainContent .externalResourcesNav .externalResources {
-	background-color: #343933;
+	background-color: #16737C;
 	display: inline-block;
 	text-align: center;
 	margin-top: 0px;
@@ -315,7 +315,7 @@ header .socialNetworkNavBar .socialNetworkNav img:hover {
 }
 
 .comm {
-	background-color: #343933;
+	background-color: #16737C;
 	display: inline-block;
 	text-align: center;
 	margin-top: 0px;
