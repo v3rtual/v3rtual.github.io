@@ -3,96 +3,99 @@
 <!--jquery they could NEVER make me hate you-->
 <script src="Assets/js/para/parallax-1.js"></script>
 <script>
-	// start time 
-	function startTime() {
-		const today = new Date();
-		let h = today.getUTCHours();
-		let m = today.getUTCMinutes();
-		let s = today.getUTCSeconds();
-		h = h - 4
-		if (h < 0) {
-			h = 24 + h
-		};
-		m = checkTime(m);
-		s = checkTime(s);
-		var xm = "AM";
-		if (h >= 12) {
-			var xm = "PM";
-			h = h - 12;
-		};
-		if (h == 0) {
-			h = 12
-		};
-		document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-		document.getElementById('xm').innerHTML = xm;
-		setTimeout(startTime, 1000);
+// start time 
+function startTime() {
+	const today = new Date();
+	let h = today.getUTCHours();
+	let m = today.getUTCMinutes();
+	let s = today.getUTCSeconds();
+	h = h - 4
+	if(h < 0) {
+		h = 24 + h
+	};
+	m = checkTime(m);
+	s = checkTime(s);
+	var xm = "AM";
+	if(h >= 12) {
+		var xm = "PM";
+		h = h - 12;
+	};
+	if(h == 0) {
+		h = 12
+	};
+	document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+	document.getElementById('xm').innerHTML = xm;
+	setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+	if(i < 10) {
+		i = "0" + i
+	}; // add zero in front of numbers < 10
+	return i;
+}
+// end time
+// start music
+function shuffle(array) {
+	let currentIndex = array.length;
+	// While there remain elements to shuffle...
+	while(currentIndex != 0) {
+		// Pick a remaining element...
+		let randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+		// And swap it with the current element.
+		[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
 	}
-	function checkTime(i) {
-		if (i < 10) {
-			i = "0" + i
-		}; // add zero in front of numbers < 10
-		return i;
+}
+// Used like so
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+shuffle(arr);
+currentShuffleNumber = 0;
+var currentAudio;
+
+function startMusic(offset) {
+	if(currentShuffleNumber < 18) {
+		currentAudio = document.getElementById(arr[currentShuffleNumber]);
+		currentAudio.play();
+		var filename = currentAudio.src.replace(/^.*[\\/]/, '')
+		document.getElementById('song').innerHTML = unescape(filename.replace('.mp3', ''));
+		currentAudio.currentTime = +offset;
+		currentShuffleNumber++;
+		var s = currentAudio.duration - +offset;
+		var ms = s * 1000
+		setTimeout(startMusic, ms);
 	}
-	// end time
-	
-	// start music
-	function shuffle(array) {
-		let currentIndex = array.length;
-		// While there remain elements to shuffle...
-		while (currentIndex != 0) {
-			// Pick a remaining element...
-			let randomIndex = Math.floor(Math.random() * currentIndex);
-			currentIndex--;
-			// And swap it with the current element.
-			[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-		}
-	}
-	// Used like so
-	arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
-	shuffle(arr);
-	currentShuffleNumber = 0;
-	var currentAudio;
-	
-	function startMusic(offset) {
-		if ( currentShuffleNumber < 18 ) {
-			currentAudio = document.getElementById(arr[currentShuffleNumber]); 
-			currentAudio.play();
-			var filename = currentAudio.src.replace(/^.*[\\/]/, '')
-			document.getElementById('song').innerHTML = unescape(filename.replace('.mp3',''));
-			currentAudio.currentTime = +offset;
-			currentShuffleNumber++;
-			var s = currentAudio.duration - +offset;
-			var ms = s*1000
-			setTimeout(startMusic, ms);
-		}
-	}
-	
-	function pawsmusic() {
-		if ( currentAudio.paused == true ) {
-			currentAudio.play();
-			document.getElementById("kitty").src = "Assets/images/dancycat.gif"
-		} else {
-			currentAudio.pause();
-			document.getElementById("kitty").src = "Assets/images/sadcat.png"
-		};
-	}
+}
+
+function pawsmusic() {
+	if(currentAudio.paused == true) {
+		currentAudio.play();
+		document.getElementById("kitty").src = "Assets/images/dancycat.gif"
+	} else {
+		currentAudio.pause();
+		document.getElementById("kitty").src = "Assets/images/sadcat.png"
+	};
+}
 </script>
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="The Simply Extravagant website of the user commonly known as v3rtual." />
-    <meta property="og:site_name" content="v3rtual's site" />
-    <meta property="og:title" content="v3rtual" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="The Simply Extravagant website of the user commonly known as v3rtual." />
-    <meta property="og:image" content="Assets/images/v3rtual.png" />
-    <meta property="og:image:width" content="1300" />
-    <meta property="og:image:height" content="600" />
-    <meta property="og:url" content="https://v3rtual.github.io/" />
+	<meta name="description" content="The Simply Extravagant website of the user commonly known as v3rtual." />
+	<meta property="og:site_name" content="v3rtual's site" />
+	<meta property="og:title" content="v3rtual" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="The Simply Extravagant website of the user commonly known as v3rtual." />
+	<meta property="og:image" content="Assets/images/v3rtual.png" />
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1300" />
+	<meta property="og:image:height" content="600" />
+	<meta property="og:url" content="https://v3rtual.github.io/" />
+	<meta property="twitter:card" content="summary_large_image">
+	<link rel="canonical" href="https://v3rtual.github.io">
 	<title>v3rtual</title>
 	<script>
-		var __adobewebfontsappname__ = "dreamweaver"
+	var __adobewebfontsappname__ = "dreamweaver"
 	</script>
 	<script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
 	<link href="Assets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css">
@@ -119,15 +122,15 @@
 	<div data-parallax="scroll" data-image-src="Assets/images/back.png">
 		<div class="animation-wrapper">
 			<div class="particle particle-1"></div>
-				<div class="particle particle-2"></div>
-				<div class="particle particle-3"></div>
-			    <div class="particle particle-4"></div>
+			<div class="particle particle-2"></div>
+			<div class="particle particle-3"></div>
+			<div class="particle particle-4"></div>
 		</div>
 		<div class="innercontent">
 			<header>
 				<div class="profileLogo">
 					<p class="logoPlaceholder"> <span> v3rtual's site </span></p>
-					<p class="logoPlaceholder" style="float: right"> <span><img src="Assets/images/dancycat.gif" height="30pt" width="30pt" onClick="pawsmusic()" id="kitty"> now playing: <none id="song"></none></span></p> 
+					<p class="logoPlaceholder" style="float: right"> <span><img src="Assets/images/dancycat.gif" height="30pt" width="30pt" onClick="pawsmusic()" id="kitty"> now playing: <none id="song"></none></span></p>
 				</div>
 				<div class="profilePhoto"> <img src="Assets/images/profilephoto.png" alt="v3rtual's profile picture, A green version of the VirtualBox logo taking a nap." style="object-fit:contain; width: 92%; height: 100%;"> </div>
 				<!-- Identity details -->
@@ -138,8 +141,7 @@
 					<p>Hello there! My name is Lucien, but I heavily prefer being called v3rtual online.</p>
 					<p> Right now, it is
 						<none id="time">[Your browser failed to retrieve UTC Time. You might need to enable Javascript.]</none>
-						<none id="xm"></none> where I am. You'll usually be able to catch me between 7 AM and 11 PM.
-					</p>
+						<none id="xm"></none> where I am. You'll usually be able to catch me between 7 AM and 11 PM. </p>
 					<p>I am 15 years old, and my birthday is on February 9th. I use ona/ona/onas and he/hem/hems pronouns. Please do not use they/them pronouns on me.</p>
 					<p>I use an s=z typing quirk (infrequently) and an !≈1 typing quirk, however if you have difficulty reading with them or ask me I will not use them around you.</p>
 					<p>mi ken toki kepeken toki pona. sina toki pona la o toki tawa mi. mi wile olin e jan pi toki pona.</p>
@@ -154,11 +156,9 @@
 					<hr class="sectionTitleRule">
 					<hr class="sectionTitleRule2">
 					<div class="section1Content">
-						<p> 
-							<strong>
+						<p> <strong>
 								<span>My commissions are </span>OPEN!
-							</strong>
-						</p>
+							</strong> </p>
 						<a href="commissions.html" class="fill-div">
 							<div class="comm">commission info </div>
 						</a>
@@ -234,8 +234,9 @@
 			</section>
 			<footer>
 				<hr>
-				<p class="footerDisclaimer">i made this site myself! css, html, js <3 </p>
-				<p class="footerNote">v3rtual</p>
+				<p class="footerDisclaimer">i made this site myself! css, html, js
+					<3 </p>
+						<p class="footerNote">v3rtual</p>
 			</footer>
 		</div>
 	</div>
