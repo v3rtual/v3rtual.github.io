@@ -227,7 +227,7 @@
         const enrollmentStart = lines.find(line => line.includes('Show enrollment screen'));
         if (!enrollmentStart) {
           text.style.display = "block";
-          text.innerText = "Error (THIS IS NOT A BUG!): Could not parse for 'Show enrollment screen', please ask for support in TitaniumNetwork or copernicium";
+          text.innerText = "Error: Could not parse for 'Show enrollment screen.'";
           text.style.color = "#ed8796";
           return;
         }
@@ -236,7 +236,7 @@
         const endLine = lines.find(line => line.includes('Blocking dev mode by device policy'));
         if (!endLine) {
           text.style.display = "block";
-          text.innerText = "Error (THIS IS NOT A BUG!): Could not parse for 'Blocking dev mode by device policy', please ask for support in TitaniumNetwork or copernicium";
+          text.innerText = "Error: Could not parse for 'Blocking dev mode by device policy.'";
           text.style.color = "#ed8796";
           return;
         }
